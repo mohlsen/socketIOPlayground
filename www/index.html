@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO Test</title>
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body ng-app="mySocketIOApp">
+
+  	<div ng-controller="MyController">
+  		{{data || json}}
+  	</div>
+
+	<script src="/lib/angular/angular.min.js"></script>
+	<script src="/app.js"></script>
+<!--
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+	  var socket = io();
+	</script>
+-->
+  </body>
+</html>
