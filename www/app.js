@@ -11,24 +11,11 @@ app.factory('socket', function (socketFactory) {
 });
 
 app.controller('MyController', function($scope, socket) {
-  
+  $scope.devices = [];
 
-  	//   var socket = io();
-	  // socket.on('deviceDetails', function(msg){
-	  //   console.log(msg);
-	  // });
-
-  //$scope.$on('deviceDetails', function (ev, respData) {
   socket.on('deviceDetails', function (respData) {
-      $scope.data = respData;
-      console.log(respData);
+      $scope.devices.push(respData);
+      //console.log(respData);
   });
-
- //  $scope.data = [
- //  	{"name1":"value1"},
-	// {"name2":"value2"},
-	// {"name3":"value3"},
-	// {"name4":"value4"}
- //  ];
     
 });

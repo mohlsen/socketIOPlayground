@@ -7,19 +7,41 @@
   <body ng-app="mySocketIOApp">
 
   	<div ng-controller="MyController">
-  		{{data || json}}
+  		
+  	<h3>Devices Found: <span class="label label-default">{{devices.length}}</span></h3>
+
+  		<div class="list-group">
+			<div ng-repeat="device in devices">
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">{{device.address}}  (Item: {{$index}})</h4>
+					<p class="list-group-item-text">
+						<div class="container">
+							<div class="row">
+							  <div class="col-md-4">Port: {{device.port}}</div>
+							  <div class="col-md-4">Device Type: {{device.deviceType}}</div>
+							  <div class="col-md-4">Product Code:{{device.productCode}}</div>
+							</div>
+							<div class="row">
+							  <div class="col-md-4">Serial Number: {{device.serialNumber}}</div>
+							  <div class="col-md-4">Product Name:{{device.productName}}</div>
+							  <div class="col-md-4">Version: {{device.version}}</div>
+							</div>
+						</div>
+					</p>
+				</a>
+			</div>
+
+  		</div>
+
   	</div>
+
+
+
+
+
 	<script src="/lib/socket.io/node_modules/socket.io-client/socket.io.js"></script>
 	<script src="/lib/angular/angular.min.js"></script>
 	<script src="/lib/angular-socket-io/socket.min.js"></script>
 	<script src="/app.js"></script>
-
-<!--	<script>
-	  var socket = io();
-	  socket.on('deviceDetails', function(msg){
-	    console.log(msg);
-	  });
-	</script>
--->
   </body>
 </html>

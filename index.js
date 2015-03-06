@@ -30,6 +30,7 @@ io.on('connection', function(socket){
          "productCode": 123,
          "serialNumber": "QWERTY" + Math.floor(Math.random() * 10000),
          "productName": "Device " + iterations,
+         "version": "1.0." + Math.floor(Math.random() * 10)
        }
   	);
 
