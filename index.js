@@ -33,7 +33,7 @@ io.on('connection', function(socket){
        }
   	);
 
-  	if (iterations >= 5) {
+  	if (iterations >= 50) {
         clearInterval(cancelInterval);
         console.log('done sending at interval');
     }
