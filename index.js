@@ -23,7 +23,7 @@ io.on('connection', function(socket){
 
   var cancelInterval = setInterval(function() { 
   	iterations++;
-  	io.emit('deviceDetails', { 
+  	socket.emit('deviceDetails', { 
          "address": "10.0.0." + Math.floor(Math.random() * 999),
          "port": 8080,
          "deviceType": 1,
