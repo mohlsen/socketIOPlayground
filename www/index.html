@@ -17,6 +17,9 @@
 	<script src="/lib/socket.io/node_modules/socket.io-client/socket.io.js"></script>
 	<script>
 	  var socket = io();
+	  socket.on('deviceDetails', function(msg){
+	    console.log(msg);
+	  });
 	</script>
 
   </body>
